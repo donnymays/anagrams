@@ -5,7 +5,7 @@ describe(Anagram) do
   describe("#is_word?") do
     it("checks to see if a string is a word based on presence of vowels") do
       anagram = Anagram.new()
-      expect(anagram.is_word?("blue", "blfr")).to(eq(false))
+      expect(anagram.is_word?("blue", "blur")).to(eq(false))
     end
   end
   
