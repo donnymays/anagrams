@@ -11,7 +11,7 @@ describe(Anagram) do
   
   describe("#are_anagrams?") do
     it("checks to see if two words are anagrams") do
-      anagram = Anagram.new("deal", "led")
+      anagram = Anagram.new("deal", "laed")
       expect(anagram.are_anagrams?()).to(eq(true))
     end
   end
