@@ -30,9 +30,15 @@ class Anagram
   def are_antigrams?(word1, word2)
     word1_array = word1.downcase().split("")
     word2_array = word2.downcase().split("")
-    intersection = word1_array & word2_array 
-    if intersection == []
+    if word1_array & word2_array = []
       return true
     end
   end
+
+  def phrase_anagrams?(phrase1, phrase2)
+    if phrase1.gsub(/[^a-zA-Z0-9\-]/,"").sort() == phrase1.gsub(/[^a-zA-Z0-9\-]/,"").sort()
+      return true
+    end
+  end
+
 end

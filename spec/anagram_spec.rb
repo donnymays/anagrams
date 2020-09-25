@@ -29,4 +29,11 @@ describe(Anagram) do
     expect(anagram.are_antigrams?("fLy", "red")).to(eq(true))
     end
   end
+
+  describe("#phrase_antigrams?") do
+  it("checks to see if two phrases are anagrams") do
+    anagram = Anagram.new()
+    expect(anagram.are_antigrams?("blue is #neat", "blue#neat is")).to(eq(false))
+    end
+  end
 end
