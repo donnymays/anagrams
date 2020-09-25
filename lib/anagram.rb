@@ -9,7 +9,7 @@ class Anagram
   end
 
   def is_word?(word1, word2)
-    if word1 || word2 !=~ /[aeiouy]/
+   if !word1.split("").include?(/[aeiouy]/) || !word2.split("").include?(/[aeiouy]/)
       return false
     end
   end
