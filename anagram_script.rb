@@ -1,5 +1,4 @@
 #!/usr/bin/ruby
-
 require ('./lib/anagram')
 
 puts "#"*50
