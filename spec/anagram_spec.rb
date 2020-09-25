@@ -26,7 +26,7 @@ describe(Anagram) do
   describe("#are_antigrams?") do
   it("checks to see if two words are antigrams") do
     anagram = Anagram.new()
-    expect(anagram.are_antigrams?("fLy", "red")).to(eq(false))
+    expect(anagram.are_antigrams?("fLy", "red")).to(eq(true))
     end
   end
 end
