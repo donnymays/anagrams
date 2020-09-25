@@ -9,10 +9,12 @@ class Anagram
   def is_word?(word1, word2)
     if word1 || word2 !=~ /[aeiouy]/
       return false
+      print "You need to input actual words!"
     end
   end
   
-  def are_anagrams?
+  def are_anagrams?(word1, word2)
+   
 
   end
 
