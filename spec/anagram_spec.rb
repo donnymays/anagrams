@@ -19,7 +19,7 @@ describe(Anagram) do
   describe("#case_insensitive?") do
     it("checks to see if two words are anagrams regardless of lettercase") do
       anagram = Anagram.new()
-      expect(anagram.case_insensitive?("DeAl", "lead")).to(eq(false))
+      expect(anagram.case_insensitive?("DeAl", "lead")).to(eq(true))
     end
   end
 end
