@@ -15,4 +15,11 @@ describe(Anagram) do
       expect(anagram.are_anagrams?("deal", "lead")).to(eq(true))
     end
   end
+
+  describe("#case_insensitive?") do
+    it("checks to see if two words are anagrams regardless of lettercase") do
+      anagram = Anagram.new()
+      expect(anagram.case_insensitive?("DeAl", "lead")).to(eq(false))
+    end
+  end
 end

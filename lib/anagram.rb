@@ -18,4 +18,10 @@ class Anagram
    end
   end
 
+  def case_insensitive?(word1, word2)
+    if word1.downcase().chars.sort() == word2.downcase().chars.sort()
+      return true
+    end
+  end
+
 end

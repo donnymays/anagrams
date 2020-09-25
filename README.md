@@ -37,7 +37,7 @@ Account for multiple words being anagrams or "antigrams." Spaces and punctuation
 | Spec     | Behavior | Input    | Output   |
 | -------- | -------- | -------- | -------- |
 | 1 | Will check to see if strings are words based on presence of vowels | "bgf" | false |
-| 2 |  | 12 | 2,3,5,6,7,9,11 |
+| 2 | Will check to see if two words are anagrams | "deal", "lead" | true |
 | 3 |  | 12 | 2,3,5,7,11 |
 | 4 |  | 12 | 2,3,5,7,11 |
 | 5 |  | 12 | 2,3,5,7,11 |
