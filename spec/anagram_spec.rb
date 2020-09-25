@@ -2,10 +2,10 @@ require('anagram.rb')
 require('rspec')
 
 describe(Anagram) do
-  describe("#are_words?") do
+  describe("#are_anagrams?") do
     it("checks to see if two words are words") do
       anagram = Anagram.new("deal", "ld")
-      expect(anagram.are_words?()).to(eq(false))
+      expect(anagram.are_anagrams?()).to(eq(false))
     end
   end
   
@@ -36,5 +36,8 @@ describe(Anagram) do
     expect(anagram.are_antigrams?()).to(eq(true))
     end
   end  
+
+  describe("#letters_in_common") do
+  it("returns the letters shared by the two phrases")
 end
 

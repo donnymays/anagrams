@@ -1,11 +1,10 @@
 require('pry')
 
-class Anagram
-  attr_accessor(:word1, :word2)
-  
+class Anagram  
   def initialize()
     @word1
     @word2
+    @common_letters
   end
 
   def word1()
@@ -31,11 +30,17 @@ class Anagram
   end
 
   def are_antigrams?()
-    word1_array = @word1.downcase().split("")
-    word2_array = @word2.downcase().split("")
+    word1_array = @word1.gsub(/[^a-zA-Z0-9\-]/,"").downcase().split("")
+    word2_array = @word2.gsub(/[^a-zA-Z0-9\-]/,"").downcase().split("")
     if word1_array & word2_array == []
       return true
     end
+  end
+
+  def letters_in_common()
+    word1_array = @word1.gsub(/[^a-zA-Z0-9\-]/,"").downcase().split("")
+    word2_array = @word2.gsub(/[^a-zA-Z0-9\-]/,"").downcase().split("")
+    @common_letters = (word1_array & word2_array).join(", ")
   end
 
   def run_script()
@@ -48,7 +53,8 @@ class Anagram
     elsif are_antigrams?() == true
       puts "Your phrases are antigrams"
     else
-      puts "Your phrases are neither anagrams no antigrams"
+      letters_in_common()
+      puts "Your phrases are neither anagrams nor antigrams, but they do have #{@common_letters.length} letters in common: #{@common_letters}."
     end
   end
 end
