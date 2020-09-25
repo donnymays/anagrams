@@ -15,5 +15,12 @@ describe(Anagram) do
       expect(anagram.are_anagrams?()).to(eq(true))
     end
   end
+
+  describe("#are_anagrams?") do
+  it("checks to see if two words are anagrams regardless of case") do
+    anagram = Anagram.new("DeAl", "laedd")
+    expect(anagram.are_anagrams?()).to(eq(true))
+  end
+end
 end
 

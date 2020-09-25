@@ -13,7 +13,7 @@ class Anagram
     if @word1.scan(/[aeiouy]/).count == 0 || @word2.scan(/[aeiouy]/).count == 0
      print "Please Enter a Word" 
      return false
-    elsif @word1.chars.sort() == @word2.chars.sort()
+    elsif @word1.downcase().chars.sort() == @word2.downcase().chars.sort()
       print "Your Phrases are Anagrams!"
       return true
       
