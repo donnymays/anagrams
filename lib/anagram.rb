@@ -20,7 +20,12 @@ class Anagram
 
   def are_words?()
     all_words = File.read("every_word.txt").split
-    return false unless ((all_words.include?(@word1)) && (all_words.include?(@word2)))
+    word1_array = @word1.split(" ")
+    word2_array = @word2.split(" ")
+    real_words = word1_array & word2_array & all_words
+    if real_words == []
+    return false 
+    end
   end
   
   def are_anagrams?()
