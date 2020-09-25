@@ -1,6 +1,6 @@
 require('pry')
 
-class Anagram  
+class Anagram 
   def initialize()
     @word1
     @word2
@@ -22,8 +22,9 @@ class Anagram
     all_words = File.read("every_word.txt").split
     word1_array = @word1.split(" ")
     word2_array = @word2.split(" ")
-    real_words = word1_array & word2_array & all_words
-    if real_words == []
+    real_words1 = word1_array & all_words
+    real_words2 = word2_array & all_words
+    if real_words1 == [] || real_words2 == []
     return false 
     end
   end
@@ -53,7 +54,7 @@ class Anagram
     word1()
     word2()
     if are_words?() == false
-      puts "Please Enter a Word"
+      puts "Please Enter a Phrase Containing English Words"
     elsif are_anagrams?() == true
       puts "Your phrases are anagrams"
     elsif are_antigrams?() == true

@@ -40,11 +40,10 @@ Account for multiple words being anagrams or "antigrams." Spaces and punctuation
 | 2 | Will check to see if two words are anagrams | "deal", "lead" | true |
 | 3 | Will check to see if two words are anagrams regardless of lettercase | "lEad", "deal" | true |
 | 4 | Will check to see it two words are anitgrams | "fly", "red | true |
-| 5 |  | 12 | 2,3,5,7,11 |
-| 6 |  | 12 | 2,3,5,7,11 |
+
 
 ## Known Bugs
-_There are no known bugs at this time._
+_Tests in the anagram_spec page are not passing with current code, but the script is functional._
 
 ## Technologies Used
 * Ruby
