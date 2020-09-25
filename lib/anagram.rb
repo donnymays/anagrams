@@ -11,8 +11,12 @@ class Anagram
   
   def are_anagrams?()
     if @word1.scan(/[aeiouy]/).count == 0 || @word2.scan(/[aeiouy]/).count == 0
-     binding.pry
-      return false
+     print "Please Enter a Word" 
+     return false
+    elsif @word1.chars.sort() == @word2.chars.sort()
+      print "Your Phrases are Anagrams!"
+      return true
+      
     end
 
   end
