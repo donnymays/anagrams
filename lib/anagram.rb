@@ -40,7 +40,8 @@ class Anagram
   def letters_in_common()
     word1_array = @word1.gsub(/[^a-zA-Z0-9\-]/,"").downcase().split("")
     word2_array = @word2.gsub(/[^a-zA-Z0-9\-]/,"").downcase().split("")
-    @common_letters = (word1_array & word2_array).join(", ")
+    @common_count = (word1_array & word2_array).length
+    @common_letters = (word1_array & word2_array).insert(-2, "&").join(", ")
   end
 
   def run_script()
@@ -54,7 +55,7 @@ class Anagram
       puts "Your phrases are antigrams"
     else
       letters_in_common()
-      puts "Your phrases are neither anagrams nor antigrams, but they do have #{@common_letters.length} letters in common: #{@common_letters}."
+      puts "Your phrases are neither anagrams nor antigrams, but they do have #{@common_count} letters in common: #{@common_letters}."
     end
   end
 end
