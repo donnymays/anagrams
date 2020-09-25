@@ -22,4 +22,11 @@ describe(Anagram) do
       expect(anagram.case_insensitive?("DeAl", "lead")).to(eq(true))
     end
   end
+
+  describe("#are_antigrams?") do
+  it("checks to see if two words are antigrams") do
+    anagram = Anagram.new()
+    expect(anagram.are_antigrams?("DeAl", "fled")).to(eq(false))
+    end
+  end
 end
