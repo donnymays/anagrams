@@ -1,21 +1,11 @@
 require('pry')
 
 class Anagram 
-  def initialize()
-    @word1
-    @word2
+  def initialize(word1, word2)
+    @word1 = word1
+    @word2 = word2
     @common_letters
     @common_count
-  end
-
-  def word1()
-    puts "Type a phrase"
-    @word1 = gets.chomp
-  end
-  
-  def word2()
-    puts "Type another phrase"
-    @word2 = gets.chomp
   end
 
   def are_words?()
@@ -45,14 +35,12 @@ class Anagram
 
   def letters_in_common()
     word1_array = @word1.gsub(/[^a-zA-Z0-9\-]/,"").downcase().split("")
-    word2_array = @word2.gsub(/[^a-zA-Z0-9\-]/,"").downcase().split("")
-    @common_count = (word1_array & word2_array).length
+    word2_array = @word2.gsub(/[^a-zA-Z0-9\-]/,"").downcase().split("")  
     @common_letters = (word1_array & word2_array)
+    @common_count = (word1_array & word2_array).length
   end
 
   def run_script()
-    word1()
-    word2()
     if are_words?() == false
       puts "Please Enter a Phrase Containing English Words"
     elsif are_anagrams?() == true

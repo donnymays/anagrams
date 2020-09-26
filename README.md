@@ -10,7 +10,7 @@ _25 September 2020_
 - In terminal/command line, navigate into the directory where you would like to create a new Ruby project.
 - Clone this project using the 'git clone <filename>' command in terminal/command line while in the desired directory.
 - Navigate to the cloned folder and run 'bundle' in your command line to download gem dependencies.
-- Run 'ruby anagram_script.rb' in the terminal while still in the root directory of the new project. Answer the command propts that appear in the terminal.
+- Run 'ruby anagram_script.rb' in the terminal while still in the root directory of the new project. Answer the command prompts that appear in the terminal.
 
 ## Description
 _This is a project for Week 1 of the Ruby block of Epicodus.  Prompt can be seen below._
@@ -43,7 +43,7 @@ Account for multiple words being anagrams or "antigrams." Spaces and punctuation
 
 
 ## Known Bugs
-_Tests in the anagram_spec page are not passing with current code, but the script is functional._
+_There are no known bugs at this time_
 
 ## Technologies Used
 * Ruby

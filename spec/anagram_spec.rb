@@ -4,8 +4,8 @@ require('rspec')
 describe(Anagram) do
   describe("#are_words?") do
     it("checks to see if two words are words") do
-      anagram = Anagram.new("deal", "ld")
-      expect(anagram.are_anagrams?()).to(eq(false))
+      anagram = Anagram.new("deal", "lsdd")
+      expect(anagram.are_words?()).to(eq(false))
     end
   end
   
@@ -40,8 +40,7 @@ describe(Anagram) do
   describe("#letters_in_common") do
     it("returns the letters shared by the two phrases") do
       anagram = Anagram.new("green", "blue")
-      anagram.letters_in_common()
-      expect(@common_letters).to(eq(["e"]))
+      expect(anagram.letters_in_common()).to(eq(1))
     end
   end
 end
